@@ -18,18 +18,25 @@ As the price of 1 Bitcoin(BTC) goes higher than $17,000, cryptocurrency becomes 
 ### Objective
 
 - Understand the Bitcoin network and the Bitcoin mining algorithm
-- Understand the priniciple of SHA-256 algorithm
+- Understand the principle of SHA-256 algorithm
 - Implement SHA-256 algorithm in Verilog
 - Implement Bitcoin mining algorithm in Verilog
 
 
 ### Structure
-The following picture is the block diagram for SHA-256. I implementeed the SHA-256 Engine part in the figure.
+The following picture is the block diagram for SHA-256. I implemented the SHA-256 Engine part in the figure.
 ![figure1_c](images/sha256_block_diagram.png)
 
+The source code consists of 3 files: sha256_hash.v, sha256_round.v, sha256_round_unit.v.
+1. sha256_round_unit.v
+This file is for the units used in sha256_round.vj
+2. sha256_round.v
+This file is the module executing SHA-256 round operations. It iterates the step 3 each cycle.
+3. sha256_hash.v
+This file is the whole SHA-256 calculation except for preprossing.
 
 ### Extension
-This project does not fully cover all of Bitcoin mining. It is needed to add SHA-256 preprossessing and networking of a miner to this project.
+This project does not fully cover all of Bitcoin mining. It is needed to add SHA-256 preprossing and networking of a miner to this project.
 
 #### Reference
 - SHA-256 Algorithm: [“Secure Hash Standard (SHS)”, Information Technology Laboratory, National Institute of Standards and Technology](https://csrc.nist.gov/csrc/media/publications/fips/180/2/archive/2002-08-01/documents/fips180-2.pdf)
