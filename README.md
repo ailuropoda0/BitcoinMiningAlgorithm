@@ -11,7 +11,7 @@ This project is about implementing Bitcoin Mining Algorithm using Verilog. Bitco
 Bitcoin mining is like solving cryptographical problems within the appointed amount of time and it needs repetitive and fast calculation. So optimizing calculation is important for mining. FPGA is usually better than multi-purpose processors like CPU. In order to execute mining on FPGA, this project implements Bitcoin Algorithm in Verilog.
 
 ### Motivation
-As the price of 1 Bitcoin(BTC) goes higher than $17,000, cryptocurrency becomes a major issue all over the world. And there is a statistics that the power consumption of Bitcoin mining exceeds that of many countries. So this project deals with how the Bitcoin network is working and why Bitcoin mining needs enormous power consumption. Also, since the performance versus power is a major topic in the computer industry, implementing Bitcoin mining will be an interesting engineering problem.
+As the price of 1 Bitcoin(BTC) goes higher than $17,000, cryptocurrency becomes a major issue all over the world and many people dive into Bitcoin mining. And there is a statistics that the power consumption of Bitcoin mining exceeds that of many countries. So this project deals with how the Bitcoin network is working and why Bitcoin mining needs enormous power consumption. Also, since the performance versus power is a major topic in the computer industry, implementing Bitcoin mining will be an interesting engineering problem.
 
 ### Objective
 - Understand the Bitcoin network and the Bitcoin mining algorithm
@@ -35,7 +35,7 @@ SHA-256 is one of the most popular hash function. It is designed by the United S
    In this step, the hash value of 512 bits are calculated from 64 blocks of 16 bits. It iterates some calculation each block.
 
 ### Structure
-The following picture is the block diagram for SHA-256. I implemented the SHA-256 Engine part in the figure.
+The following picture is the block diagram for SHA-256. I implemented the SHA-256 Engine part in the figure. The engine part proceeds 2 and 3 steps in SHA-256, which are the processes after preprocessing.
 ![figure1_c](images/sha256_block_diagram.png)
 
 The source code consists of 3 files: sha256_hash.v, sha256_round.v, sha256_round_unit.v.
