@@ -1,11 +1,3 @@
- // Perform a SHA-256 transformation on the given 512-bit data, and 256-bit 
- // initial state, // Outputs one 256-bit hash every LOOP cycle(s). 
- // // The LOOP parameter determines both the size and speed of this module. 
- // A value of 1 implies a fully unrolled SHA-256 calculation spanning 64 round 
- // modules and calculating a full SHA-256 hash every clock cycle. A value of 
- // 2 implies a half-unrolled loop, with 32 round modules and calculating 
- // a full hash in 2 clock cycles. And so forth. 
-
 `define BYTE(x) (((x)+1)*(32)-1):((x)*(32))
 
 `include "sha256_round.v"
